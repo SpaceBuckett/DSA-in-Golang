@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(twoSum([]int{3, 2, 4}, 6))
+	fmt.Println(RemoveDuplicates([]int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}))
 }
 
 // BRUTE FORCE METHOD - O(n2)
