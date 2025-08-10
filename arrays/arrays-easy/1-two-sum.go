@@ -1,9 +1,7 @@
 package main
 
-import "fmt"
-
 func main() {
-	fmt.Println(RemoveDuplicates([]int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}))
+	//fmt.Println(removeElement([]int{0, 1, 2, 2, 3, 0, 4, 2}, 2))
 }
 
 // BRUTE FORCE METHOD - O(n2)
