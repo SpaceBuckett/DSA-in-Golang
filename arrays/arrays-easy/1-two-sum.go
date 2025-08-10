@@ -4,8 +4,9 @@ import "fmt"
 
 func main() {
 	arr := []int{3, 5, 81, 1, 0, 2}
-	fmt.Println(BubbleSort(arr))
+	mergeSort(arr, len(arr))
 
+	fmt.Println(arr)
 }
 
 // BRUTE FORCE METHOD - O(n2)
