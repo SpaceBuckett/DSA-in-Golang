@@ -1,16 +1,22 @@
 package main
 
 func RemoveDuplicates(nums []int) int {
-	mapData := make(map[int]int)
+	leftPointer := 0
+	for i := 1; i < len(nums); i++ {
 
-	for i := 0; i < len(nums); i++ {
-		_, exists := mapData[nums[i]]
-
-		if exists {
-			nums[i]++
-		} else {
-			mapData[nums[i]] = 1
+		if nums[leftPointer] != nums[i] {
+			leftPointer++
+			nums[leftPointer] = nums[i]
 		}
 	}
-	return len(mapData)
+
+	//fmt.Println(nums)
+
+	for i := leftPointer + 1; i < len(nums); i++ {
+		nums[i] = 0
+	}
+
+	//fmt.Println(nums)
+
+	return leftPointer + 1
 }
