@@ -1,8 +1,21 @@
 package main
 
+import "fmt"
+
 func main() {
-	arr := []int{3, 5, 81, 22, 0, 91}
-	secondLargestInArray(arr)
+	arr := []int{1, 2, 3, 4, 10, 10}
+	isSorted := isArraySorted(arr)
+
+	fmt.Println(isSorted)
+}
+
+func isArraySorted(arr []int) bool {
+	for i := 0; i < len(arr)-1; i++ {
+		if arr[i+1] < arr[i] {
+			return false
+		}
+	}
+	return true
 }
 
 // BRUTE FORCE METHOD - O(n2)
