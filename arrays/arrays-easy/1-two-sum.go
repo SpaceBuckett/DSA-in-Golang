@@ -4,9 +4,21 @@ import "fmt"
 
 func main() {
 	arr := []int{3, 5, 81, 1, 0, 2}
-	mergeSort(arr, len(arr))
+	max := maxInArray(arr)
 
-	fmt.Println(arr)
+	fmt.Println(max)
+}
+
+func maxInArray(arr []int) int {
+	max := arr[0]
+
+	for i := 1; i < len(arr); i++ {
+		if arr[i] > max {
+			max = arr[i]
+		}
+	}
+
+	return max
 }
 
 // BRUTE FORCE METHOD - O(n2)
